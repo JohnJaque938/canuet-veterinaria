@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mis Mascotas</title>
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Estilo de la página -->
+  <link rel="stylesheet" href="css/crear-mascota.css">
+</head>
+<body>
+  <!-- Navbar para los usuarios -->
+  <nav class="navbar">
+    <div class="nav-logo">Canuet Veterinaria Pinto</div>
+    <div class="nav-links">
+      <a href="crear-mascota.html">Mascotas</a>
+      <a href="crear-cita.html">Citas</a>
+      <a href="index.html" onclick="localStorage.clear()">Salir</a>
+    </div>
+  </nav>
+  <main class="contenedor-mascotas">
+    <!-- Formulario -->
+    <section class="tarjeta-mascota">
+      <h2 id="tituloFormulario">Registrar Mascota</h2>
+      <form id="formMascota">
+        <input type="hidden" id="mascotaId">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="text" id="especie" placeholder="Especie (Perro, Gato, etc.)" required>
+        <input type="text" id="raza" placeholder="Raza" required>
+        <input type="number" id="edad" placeholder="Edad" required min="1">
+        <button type="submit">Guardar Mascota</button>
+      </form>
+      <p id="mensaje"></p>
+    </section>
+    <!-- Listar las mascota del usuario -->
+    <section class="lista-mascotas">
+      <h3>Mis Mascotas</h3>
+      <div id="contenedorMascotas"></div>
+    </section>
+  </main>
+  <script src="js/mascotas.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+/* Cuerpo */
+body {
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Navbar */
+.barra-navegacion {
+  background-color: #2d6a4f;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.enlaces-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.enlaces-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.boton-nav {
+  background-color: #52b788;
+  padding: 8px 14px;
+  border-radius: 5px;
+}
+
+/* Sección principal */
+.seccion-principal {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.seccion-principal h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.seccion-principal h3 {
+  color: #40916c;
+  margin-bottom: 20px;
+}
+
+.seccion-principal p {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Botones */
+.botones-principales {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.botones-principales a {
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.boton-primario {
+  background-color: #2d6a4f;
+  color: white;
+}
+
+.boton-secundario {
+  background-color: #74c69d;
+  color: white;
+}
+
+/* Servicios */
+.seccion-servicios {
+  background-color: white;
+  padding: 50px 20px;
+}
+
+.seccion-servicios h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tarjetas-servicio {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  background-color: #f5f7fa;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.tarjeta h4 {
+  margin: 10px 0;
+  color: #2d6a4f;
+}
+
+/* Pie de página */
+.pie-pagina {
+  text-align: center;
+  padding: 15px;
+  background-color: #2d6a4f;
+  color: white;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .barra-navegacion {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .enlaces-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .enlaces-nav a {
+    padding: 8px;
+  }
+
+  .seccion-principal h1 {
+    font-size: 26px;
+  }
+
+  .seccion-principal h3 {
+    font-size: 18px;
+  }
+
+  .botones-principales a {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .tarjeta {
+    width: 100%;
+    max-width: 320px;
+  }
+}

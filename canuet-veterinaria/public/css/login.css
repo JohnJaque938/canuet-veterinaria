@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Cuerpo */
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Contenedor */
+.contenedor-login {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Tarjeta */
+.tarjeta-login {
+  background-color: #ffffff;
+  padding: 35px 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Título */
+.tarjeta-login h2 {
+  color: #2d6a4f;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+/* Inpunts */
+.tarjeta-login input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.tarjeta-login input:focus {
+  outline: none;
+  border-color: #52b788;
+}
+
+/* Bóton */
+.tarjeta-login button {
+  width: 100%;
+  padding: 14px;
+  background-color: #2d6a4f;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.tarjeta-login button:hover {
+  background-color: #40916c;
+}
+
+/* Mensaje */
+#mensaje {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* Enlaces */
+.enlace-volver {
+  display: block;
+  margin-top: 18px;
+  text-decoration: none;
+  color: #40916c;
+  font-size: 14px;
+}
+
+.enlace-volver:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+
+  .tarjeta-login {
+    padding: 25px 20px;
+  }
+
+  .tarjeta-login h2 {
+    font-size: 22px;
+  }
+
+  .tarjeta-login input,
+  .tarjeta-login button {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .enlace-volver {
+    font-size: 13px;
+  }
+}

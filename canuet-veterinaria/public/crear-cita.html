@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Solicitar Cita</title>
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Estilo de la página -->
+  <link rel="stylesheet" href="css/crear-cita.css">
+</head>
+<body>
+  <!-- Navbar para los usuarios -->
+  <nav class="navbar">
+    <div class="nav-logo">Canuet Veterinaria Pinto</div>
+    <div class="nav-links">
+      <a href="crear-mascota.html">Mascotas</a>
+      <a href="crear-cita.html">Citas</a>
+      <a href="index.html" onclick="localStorage.clear()">Salir</a>
+    </div>
+  </nav>
+  <main class="contenedor-citas">
+    <!-- Formulario -->
+    <section class="tarjeta-cita">
+      <h2>Solicitar Cita</h2>
+      <form id="citaForm">
+        <label>Mascota</label>
+        <select id="seleccionarMascota" required>
+          <option value="">Seleccione Mascota</option>
+        </select>
+        <label>Servicio</label>
+        <select id="seleccionarServicio" required>
+          <option value="">Seleccione Servicio</option>
+        </select>
+        <label>Horario</label>
+        <select id="seleccionarDisponibilidad" required>
+          <option value="">Seleccione Horario</option>
+        </select>
+        <button type="submit">Solicitar Cita</button>
+      </form>
+      <p id="mensaje"></p>
+    </section>
+    <!-- Listar las citas del usuario -->
+    <section class="lista-citas">
+      <h3>Mis Citas</h3>
+      <div class="tabla-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Mascota</th>
+              <th>Servicio</th>
+              <th>Fecha</th>
+              <th>Horario</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody id="tablaCitas"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="js/citas-usuario.js"></script>
+</body>
+</html>

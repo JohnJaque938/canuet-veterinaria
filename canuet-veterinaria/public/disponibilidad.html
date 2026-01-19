@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Disponibilidad</title>
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Estilo de la página -->
+  <link rel="stylesheet" href="css/admin-disponibilidad.css">
+</head>
+<body>
+<!-- Navbar para el administrador -->
+<nav class="admin-navbar">
+  <div class="nav-logo">Panel Administrador</div>
+  <div class="nav-links">
+    <a href="admin-citas.html">Citas</a>
+    <a href="disponibilidad.html" class="active">Disponibilidad</a>
+    <a href="servicio.html">Servicios</a>
+    <a href="index.html" onclick="localStorage.clear()">Salir</a>
+  </div>
+</nav>
+<main class="container">
+  <h2>Crear Disponibilidad</h2>
+  <form id="disponibilidadForm" class="card">
+    <label>Fecha</label>
+    <input type="date" id="fecha" required>
+    <label>Hora Inicio</label>
+    <input type="time" id="horaInicio" required>
+    <label>Hora Fin</label>
+    <input type="time" id="horaFin" required>
+    <button type="submit">Crear Disponibilidad</button>
+  </form>
+  <p id="mensaje" class="mensaje"></p>
+  <h2>Disponibilidades Existentes</h2>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Horario</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaDisponibilidad"></tbody>
+    </table>
+  </div>
+</main>
+<script src="js/disponibilidad.js"></script>
+</body>
+</html>

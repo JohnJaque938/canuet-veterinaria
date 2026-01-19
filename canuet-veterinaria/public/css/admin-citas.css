@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.admin-navbar {
+  background-color: #1e293b;
+  color: #fff;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #38bdf8;
+}
+
+/* Contenedor */
+.container {
+  padding: 30px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #1e293b;
+  text-align: center;
+}
+
+/* Tabla */
+.table-container {
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+thead {
+  background-color: #1e293b;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+/* Estados */
+.estado-pendiente {
+  color: #d97706;
+  font-weight: bold;
+}
+
+.estado-aprobada {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.estado-cancelada {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+/* Botones */
+button {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  margin: 2px;
+  font-size: 13px;
+}
+
+.btn-aprobar {
+  background-color: #16a34a;
+}
+
+.btn-cancelar {
+  background-color: #dc2626;
+}
+
+.btn-eliminar {
+  background-color: #64748b;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* Mensaje */
+.mensaje {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo {
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  th, td {
+    font-size: 12px;
+    padding: 6px;
+  }
+}

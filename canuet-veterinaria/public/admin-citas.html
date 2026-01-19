@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Citas</title>
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Estilo de la página -->
+  <link rel="stylesheet" href="css/admin-citas.css">
+</head>
+<body>
+<!-- Navbar para el administrador -->
+<nav class="admin-navbar">
+  <div class="nav-logo">Panel Administrador</div>
+  <div class="nav-links">
+    <a href="admin-citas.html" class="active">Citas</a>
+    <a href="disponibilidad.html">Disponibilidad</a>
+    <a href="servicio.html">Servicios</a>
+    <a href="index.html" onclick="localStorage.clear()">Salir</a>
+  </div>
+</nav>
+<main class="container">
+  <h2>Gestión de Citas</h2>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Usuario</th>
+          <th>Mascota</th>
+          <th>Servicio</th>
+          <th>Fecha</th>
+          <th>Horario</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaCitas"></tbody>
+    </table>
+  </div>
+  <p id="mensaje" class="mensaje"></p>
+</main>
+<script src="js/citas-admin.js"></script>
+</body>
+</html>

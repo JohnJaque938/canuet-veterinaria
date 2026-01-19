@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Servicios</title>
+  <!-- Reponsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Estilo de página -->
+  <link rel="stylesheet" href="css/admin-servicio.css">
+</head>
+<body>
+<!-- Navbar para el administrador -->
+<nav class="admin-navbar">
+  <div class="nav-logo">Panel Administrador</div>
+  <div class="nav-links">
+    <a href="admin-citas.html">Citas</a>
+    <a href="disponibilidad.html">Disponibilidad</a>
+    <a href="servicio.html" class="active">Servicios</a>
+    <a href="index.html" onclick="localStorage.clear()">Salir</a>
+  </div>
+</nav>
+<main class="container">
+  <h2>Gestión de Servicios</h2>
+  <p id="mensaje" class="mensaje"></p>
+  <!-- Formulario -->
+  <form id="servicioForm" class="card">
+    <input type="hidden" id="servicioId">
+    <label>Nombre</label>
+    <input type="text" id="nombre" required>
+    <label>Descripción</label>
+    <input type="text" id="descripcion">
+    <label>Precio</label>
+    <input type="number" id="precio" min="0" required>
+    <button type="submit">Guardar</button>
+    <button type="button" class="btn-cancelar" onclick="limpiarFormulario()">Cancelar</button>
+  </form>
+  <!-- Tabla -->
+  <h2>Servicios Existentes</h2>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaServicios"></tbody>
+    </table>
+  </div>
+</main>
+<script src="js/servicios.js"></script>
+</body>
+</html>
